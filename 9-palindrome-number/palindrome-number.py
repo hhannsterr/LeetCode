@@ -4,10 +4,10 @@ class Solution:
             return False
         
         x = str(x)
-        end = int(len(x)/2)
+        reversed_x = x[::-1]
         
-        for i in range(end):
-            if x[i] != x[-i-1]:
-                return False
-        return True
+        if x == reversed_x:
+            return True
+        else:
+            return False
 

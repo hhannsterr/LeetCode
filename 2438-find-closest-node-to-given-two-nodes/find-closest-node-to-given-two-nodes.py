@@ -20,10 +20,7 @@ class Solution:
         reachable_1 = BFS(node1, reachable_1)
         reachable_2 = BFS(node2, reachable_2)
 
-        s1 = set(reachable_1.keys())
-        s2 = set(reachable_2.keys())
-
-        s1 = s1.intersection(s2)
+        s1 = set(reachable_1.keys()).intersection(set(reachable_2.keys()))
 
         # which max(reachable_1[node], reachable_2[node]) is minimum.
 

@@ -10,7 +10,7 @@ class Solution:
         temp = new_head
         while cur and cur.next:
             if cur.val != cur.next.val:
-                if temp.next == cur or temp == cur:
+                if temp.next == cur:
                     temp = cur
                 else:
                     temp.next = cur.next

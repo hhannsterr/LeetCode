@@ -30,6 +30,7 @@ class Solution:
                 cur.val = swap_2
             elif cur.val == swap_2:
                 cur.val = swap_1
+                return
             
             if cur.right:
                 traverse_replace(cur.right, swap_1, swap_2)

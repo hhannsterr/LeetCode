@@ -1,12 +1,13 @@
 class Solution:
     def findLHS(self, nums: List[int]) -> int:
-        nums.sort()
         hash_map = {}
         for i, num in enumerate(nums):
             if num in hash_map:
                 hash_map[num] += 1
             else:
                 hash_map[num] = 1
+
+        hash_map = dict(sorted(hash_map.items(), key=lambda item: item[0]))
 
         max_sub = 0
         for key, val in hash_map.items():

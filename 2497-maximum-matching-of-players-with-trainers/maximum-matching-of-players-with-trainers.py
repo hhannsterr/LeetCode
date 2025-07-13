@@ -4,16 +4,14 @@ class Solution:
         trainers.sort()
 
         len_p = len(players)
-        len_t = len(trainers)
 
         p = 0
-        t = 0
         output = 0
-        while p < len_p and t < len_t:
-            print(players[p], trainers[t])
-            if players[p] <= trainers[t]:
+        for trainer in trainers:
+            if players[p] <= trainer:
                 output += 1
                 p += 1
-            t += 1
+            if p >= len_p:
+                break
         
         return output

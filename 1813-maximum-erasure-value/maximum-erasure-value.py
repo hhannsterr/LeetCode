@@ -15,8 +15,7 @@ class Solution:
                 left += 1
             else:
                 num_set.add(num)
-                current_sum += num                    
-                if current_sum > max_sum:
-                    max_sum = current_sum
+                current_sum += num
+                max_sum = max(max_sum, current_sum)                    
 
         return max_sum

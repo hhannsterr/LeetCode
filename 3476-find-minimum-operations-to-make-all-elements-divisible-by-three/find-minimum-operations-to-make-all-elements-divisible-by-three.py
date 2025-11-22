@@ -3,6 +3,6 @@ class Solution:
         cnt = 0
         for num in nums:
             remainder = num % 3
-            if remainder != 0:
+            if remainder == 0:
                 cnt += 1
-        return cnt
+        return len(nums) - cnt
